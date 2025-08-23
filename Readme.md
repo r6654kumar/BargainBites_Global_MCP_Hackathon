@@ -7,3 +7,5 @@ This repository contains the source code for **BargainBites**, a project built a
 ## Contributors  
 1. Rahul Kumar Saw 
 2. Abhishek Dutta
+
+our team name is BitBros.
