@@ -1,0 +1,256 @@
+[2025-08-24T18:54:31.206Z] Server created
+[2025-08-24T18:54:31.211Z] Tools registered
+[2025-08-24T18:54:31.211Z] Starting server...
+[2025-08-24T18:54:31.213Z] Restaurant2 Menu MCP Server running...
+[2025-08-24T18:54:33.215Z] Server created
+[2025-08-24T18:54:33.223Z] Tools registered
+[2025-08-24T18:54:33.225Z] Starting server...
+[2025-08-24T18:54:33.229Z] Restaurant2 Menu MCP Server running...
+[2025-08-25T18:09:47.812Z] Server created
+[2025-08-25T18:09:47.818Z] Tools registered
+[2025-08-25T18:09:47.819Z] Starting server...
+[2025-08-25T18:09:47.820Z] Restaurant2 Menu MCP Server running...
+[2025-08-25T19:10:46.549Z] Server created
+[2025-08-25T19:10:46.554Z] Tools registered
+[2025-08-25T19:10:46.554Z] Starting server...
+[2025-08-25T19:10:46.556Z] Restaurant2 Menu MCP Server running...
+[2025-08-25T19:10:48.742Z] Tools list requested
+[2025-08-25T19:11:44.486Z] Tool called: restaurant2_track_order
+[2025-08-25T19:11:44.487Z] Tool args: {"orderId":"order_ThiVom","customer_phone":"9876543210"}
+[2025-08-25T19:11:44.488Z] === ORDER TOOL CALLED ===
+[2025-08-25T19:11:44.489Z] Sending to API: {"orderId":"order_ThiVom","customer_phone":"9876543210"}
+[2025-08-25T19:11:44.696Z] Error in place_order tool: Unexpected token 'O', "Order with"... is not valid JSON
+[2025-08-25T19:12:12.345Z] Tool called: restaurant2_track_order
+[2025-08-25T19:12:12.346Z] Tool args: {"orderId":"\"order_ThiVom\"","customer_phone":"9876543210"}
+[2025-08-25T19:12:12.347Z] === ORDER TOOL CALLED ===
+[2025-08-25T19:12:12.348Z] Sending to API: {"orderId":"\"order_ThiVom\"","customer_phone":"9876543210"}
+[2025-08-25T19:12:12.362Z] Error in place_order tool: Unexpected token 'O', "Order with"... is not valid JSON
+[2025-08-25T19:16:01.104Z] Server created
+[2025-08-25T19:16:01.109Z] Tools registered
+[2025-08-25T19:16:01.109Z] Starting server...
+[2025-08-25T19:16:01.111Z] Restaurant2 Menu MCP Server running...
+[2025-08-25T19:16:02.788Z] Tools list requested
+[2025-08-25T19:16:16.460Z] Tool called: restaurant2_track_order
+[2025-08-25T19:16:16.462Z] Tool args: {"orderId":"order_ThiVom","customer_phone":"9876543210"}
+[2025-08-25T19:16:16.463Z] === ORDER Status TOOL CALLED ===
+[2025-08-25T19:16:16.604Z] Error in place_order tool: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[2025-08-25T19:17:50.626Z] Server created
+[2025-08-25T19:17:50.631Z] Tools registered
+[2025-08-25T19:17:50.631Z] Starting server...
+[2025-08-25T19:17:50.633Z] Restaurant2 Menu MCP Server running...
+[2025-08-25T19:17:52.194Z] Tools list requested
+[2025-08-25T19:18:06.020Z] Tool called: restaurant2_track_order
+[2025-08-25T19:18:06.022Z] Tool args: {"orderId":"order_ThiVom","customer_phone":"9876543210"}
+[2025-08-25T19:18:06.023Z] === ORDER Status TOOL CALLED ===
+[2025-08-25T19:18:06.168Z] API Response: "Order Rejected"
+[2025-08-25T19:18:40.690Z] Server created
+[2025-08-25T19:18:40.695Z] Tools registered
+[2025-08-25T19:18:40.696Z] Starting server...
+[2025-08-25T19:18:40.697Z] Restaurant2 Menu MCP Server running...
+[2025-08-25T19:18:42.190Z] Tools list requested
+[2025-08-25T19:18:54.516Z] Tool called: restaurant2_track_order
+[2025-08-25T19:18:54.518Z] Tool args: {"orderId":"order_ThiVom","customer_phone":"9876543210"}
+[2025-08-25T19:18:54.519Z] === ORDER Status TOOL CALLED ===
+[2025-08-25T19:18:54.646Z] API Response: "Order Rejected"
+[2025-08-26T18:42:27.669Z] Server created
+[2025-08-26T18:42:27.674Z] Tools registered
+[2025-08-26T18:42:27.675Z] Starting server...
+[2025-08-26T18:42:27.676Z] Restaurant2 Menu MCP Server running...
+[2025-08-26T18:42:30.601Z] Tools list requested
+[2025-08-26T18:42:35.330Z] Tool called: restaurant2_explore_menu
+[2025-08-26T18:42:35.331Z] Tool args: {}
+[2025-08-26T18:42:35.332Z] === MENU TOOL CALLED ===
+[2025-08-26T18:42:35.552Z] Menu tool successful
+[2025-08-26T20:43:39.574Z] Server created
+[2025-08-26T20:43:39.581Z] Tools registered
+[2025-08-26T20:43:39.582Z] Starting server...
+[2025-08-26T20:43:39.583Z] Restaurant2 Menu MCP Server running...
+[2025-08-26T20:47:33.118Z] Server created
+[2025-08-26T20:47:33.120Z] Tools registered
+[2025-08-26T20:47:33.121Z] Starting server...
+[2025-08-26T20:47:33.122Z] Restaurant2 Menu MCP Server running...
+[2025-08-26T20:47:34.407Z] Tools list requested
+[2025-08-26T20:49:19.151Z] Server created
+[2025-08-26T20:49:19.156Z] Tools registered
+[2025-08-26T20:49:19.157Z] Starting server...
+[2025-08-26T20:49:19.159Z] Restaurant2 Menu MCP Server running...
+[2025-08-26T20:49:20.251Z] Tools list requested
+[2025-08-26T20:49:24.864Z] Tool called: restaurant2_explore_offers
+[2025-08-26T20:49:24.865Z] Tool args: {}
+[2025-08-26T20:49:24.866Z] === Tool to display all offers to user choosed ===
+[2025-08-26T20:49:24.998Z] API Response: {"success":true,"activeOffers":[{"_id":"offer_001","name":"Pizza Lovers Deal","type":"combo","description":"Order 2 Pizzas + 1 Salad and get 25% off total","conditions":{"required_items":[{"menu_id":"1","quantity":2},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":25},"active":true,"usage_limit":200,"used_count":0,"terms":"Valid on combo orders only. Cannot be combined with other offers."},{"_id":"offer_002","name":"Burger Bonanza","type":"bogo_percentage","description":"Buy 3 Chicken Burgers and get 50% off the total burger cost","conditions":{"required_items":[{"menu_id":"2","quantity":3}]},"discount":{"type":"percentage","value":50,"applies_to":"matching_items_only"},"active":true,"usage_limit":150,"used_count":0,"terms":"Discount applies only to burger items. Minimum 3 burgers required."},{"_id":"offer_003","name":"Complete Meal Deal","type":"combo","description":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","conditions":{"required_items":[{"menu_id":"1","quantity":1},{"menu_id":"2","quantity":1},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":30},"active":true,"usage_limit":100,"used_count":0,"terms":"Must order exactly 1 of each item type. Valid for limited time."}]}
+[2025-08-26T20:49:42.292Z] Tool called: restaurant2_detailed_offer_by_id
+[2025-08-26T20:49:42.293Z] Tool args: {"offerId":"offer_001"}
+[2025-08-26T20:49:42.294Z] === Tool to display offer details by id called ===
+[2025-08-26T20:49:42.314Z] API Response: {"offerName":"Pizza Lovers Deal","offerType":"combo","offerDescription":"Order 2 Pizzas + 1 Salad and get 25% off total","offerTerms":"Valid on combo orders only. Cannot be combined with other offers.","discount":"25%"}
+[2025-08-26T20:51:09.920Z] Server created
+[2025-08-26T20:51:09.925Z] Tools registered
+[2025-08-26T20:51:09.926Z] Starting server...
+[2025-08-26T20:51:09.928Z] Restaurant2 Menu MCP Server running...
+[2025-08-26T20:51:11.568Z] Tools list requested
+[2025-08-26T20:51:15.406Z] Tool called: restaurant2_explore_offers
+[2025-08-26T20:51:15.407Z] Tool args: {}
+[2025-08-26T20:51:15.408Z] === Tool to display all offers to user choosed ===
+[2025-08-26T20:51:15.524Z] API Response: {"success":true,"activeOffers":[{"_id":"offer_001","name":"Pizza Lovers Deal","type":"combo","description":"Order 2 Pizzas + 1 Salad and get 25% off total","conditions":{"required_items":[{"menu_id":"1","quantity":2},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":25},"active":true,"usage_limit":200,"used_count":0,"terms":"Valid on combo orders only. Cannot be combined with other offers."},{"_id":"offer_002","name":"Burger Bonanza","type":"bogo_percentage","description":"Buy 3 Chicken Burgers and get 50% off the total burger cost","conditions":{"required_items":[{"menu_id":"2","quantity":3}]},"discount":{"type":"percentage","value":50,"applies_to":"matching_items_only"},"active":true,"usage_limit":150,"used_count":0,"terms":"Discount applies only to burger items. Minimum 3 burgers required."},{"_id":"offer_003","name":"Complete Meal Deal","type":"combo","description":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","conditions":{"required_items":[{"menu_id":"1","quantity":1},{"menu_id":"2","quantity":1},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":30},"active":true,"usage_limit":100,"used_count":0,"terms":"Must order exactly 1 of each item type. Valid for limited time."}]}
+[2025-08-26T20:51:23.146Z] Tool called: restaurant2_detailed_offer_by_id
+[2025-08-26T20:51:23.147Z] Tool args: {"offerId":"offer_001"}
+[2025-08-26T20:51:23.149Z] === Tool to display offer details by id called ===
+[2025-08-26T20:51:23.164Z] API Response: {"offerName":"Pizza Lovers Deal","offerType":"combo","offerDescription":"Order 2 Pizzas + 1 Salad and get 25% off total","offerTerms":"Valid on combo orders only. Cannot be combined with other offers.","discount":"25%"}
+[2025-08-27T17:11:08.901Z] Server created
+[2025-08-27T17:11:08.908Z] Tools registered
+[2025-08-27T17:11:08.909Z] Starting server...
+[2025-08-27T17:11:08.910Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:11:46.483Z] Server created
+[2025-08-27T17:11:46.487Z] Tools registered
+[2025-08-27T17:11:46.488Z] Starting server...
+[2025-08-27T17:11:46.489Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:11:48.642Z] Tools list requested
+[2025-08-27T17:11:55.005Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:11:55.006Z] Tool args: {}
+[2025-08-27T17:11:55.007Z] === MENU TOOL CALLED ===
+[2025-08-27T17:11:55.110Z] Menu tool error: fetch failed
+[2025-08-27T17:14:57.868Z] Server created
+[2025-08-27T17:14:57.873Z] Tools registered
+[2025-08-27T17:14:57.874Z] Starting server...
+[2025-08-27T17:14:57.875Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:14:58.896Z] Tools list requested
+[2025-08-27T17:15:01.390Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:15:01.391Z] Tool args: {}
+[2025-08-27T17:15:01.392Z] === MENU TOOL CALLED ===
+[2025-08-27T17:15:01.488Z] Menu tool error: fetch failed
+[2025-08-27T17:16:53.423Z] Server created
+[2025-08-27T17:16:53.427Z] Tools registered
+[2025-08-27T17:16:53.428Z] Starting server...
+[2025-08-27T17:16:53.429Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:16:55.426Z] Tools list requested
+[2025-08-27T17:16:58.554Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:16:58.555Z] Tool args: {}
+[2025-08-27T17:16:58.555Z] === MENU TOOL CALLED ===
+[2025-08-27T17:16:58.836Z] Menu tool successful
+[2025-08-27T17:16:58.837Z] Menu tool error: Cannot read properties of undefined (reading 'length')
+[2025-08-27T17:17:46.763Z] Server created
+[2025-08-27T17:17:46.769Z] Tools registered
+[2025-08-27T17:17:46.770Z] Starting server...
+[2025-08-27T17:17:46.771Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:17:48.714Z] Tools list requested
+[2025-08-27T17:17:51.526Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:17:51.527Z] Tool args: {}
+[2025-08-27T17:17:51.528Z] === MENU TOOL CALLED ===
+[2025-08-27T17:17:51.795Z] Menu tool successful
+[2025-08-27T17:18:48.596Z] Tool called: restaurant2_place_order
+[2025-08-27T17:18:48.597Z] Tool args: {"customer_name":"test","customer_phone":"987654","item_name":"Caesar Salad","quantity":2}
+[2025-08-27T17:18:48.598Z] === ORDER TOOL CALLED ===
+[2025-08-27T17:18:48.599Z] Sending to API: {"customer_name":"test","customer_phone":"987654","item_name":"Caesar Salad","quantity":2}
+[2025-08-27T17:18:48.862Z] API Response: {"message":"Order placed successfully","order_id":"order_SZLs8W"}
+[2025-08-27T17:19:28.068Z] Tool called: restaurant2_track_order
+[2025-08-27T17:19:28.069Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:19:28.070Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:19:28.218Z] API Response: {"status":"order_placed"}
+[2025-08-27T17:21:02.403Z] Tool called: restaurant2_track_order
+[2025-08-27T17:21:02.404Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:21:02.405Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:21:02.547Z] Error in track_order tool: Unexpected token 'o', "order_placed" is not valid JSON
+[2025-08-27T17:21:04.476Z] Tool called: restaurant2_track_order
+[2025-08-27T17:21:04.477Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:21:04.478Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:21:04.622Z] Error in track_order tool: Unexpected token 'o', "order_placed" is not valid JSON
+[2025-08-27T17:21:05.289Z] Tool called: restaurant2_track_order
+[2025-08-27T17:21:05.290Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:21:05.290Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:21:05.437Z] Error in track_order tool: Unexpected token 'o', "order_placed" is not valid JSON
+[2025-08-27T17:21:05.612Z] Tool called: restaurant2_track_order
+[2025-08-27T17:21:05.613Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:21:05.614Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:21:05.760Z] Error in track_order tool: Unexpected token 'o', "order_placed" is not valid JSON
+[2025-08-27T17:21:05.972Z] Tool called: restaurant2_track_order
+[2025-08-27T17:21:05.973Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:21:05.974Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:21:06.114Z] Error in track_order tool: Unexpected token 'o', "order_placed" is not valid JSON
+[2025-08-27T17:21:06.337Z] Tool called: restaurant2_track_order
+[2025-08-27T17:21:06.338Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:21:06.339Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:21:06.457Z] Error in track_order tool: Unexpected token 'o', "order_placed" is not valid JSON
+[2025-08-27T17:23:15.650Z] Server created
+[2025-08-27T17:23:15.655Z] Tools registered
+[2025-08-27T17:23:15.655Z] Starting server...
+[2025-08-27T17:23:15.657Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:23:17.166Z] Tools list requested
+[2025-08-27T17:23:20.459Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:23:20.460Z] Tool args: {}
+[2025-08-27T17:23:20.461Z] === MENU TOOL CALLED ===
+[2025-08-27T17:23:20.626Z] Menu tool successful
+[2025-08-27T17:23:35.163Z] Tool called: restaurant2_track_order
+[2025-08-27T17:23:35.164Z] Tool args: {"orderId":"order_SZLs8W","customer_phone":"987654"}
+[2025-08-27T17:23:35.165Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T17:23:35.224Z] API Response: {"status":"order_placed"}
+[2025-08-27T17:24:01.035Z] Tool called: restaurant2_explore_offers
+[2025-08-27T17:24:01.036Z] Tool args: {}
+[2025-08-27T17:24:01.037Z] === Tool to display all offers to user choosed ===
+[2025-08-27T17:24:01.140Z] API Response: {"success":true,"activeOffers":[{"id":"offer_001","name":"Pizza Lovers Deal","type":"combo","description":"Order 2 Pizzas + 1 Salad and get 25% off total","conditions":{"required_items":[{"menu_id":"1","quantity":2},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":25},"active":true,"usage_limit":200,"used_count":0,"terms":"Valid on combo orders only. Cannot be combined with other offers."},{"id":"offer_002","name":"Burger Bonanza","type":"bogo_percentage","description":"Buy 3 Chicken Burgers and get 50% off the total burger cost","conditions":{"required_items":[{"menu_id":"2","quantity":3}]},"discount":{"type":"percentage","value":50,"applies_to":"matching_items_only"},"active":true,"usage_limit":150,"used_count":0,"terms":"Discount applies only to burger items. Minimum 3 burgers required."},{"id":"offer_003","name":"Complete Meal Deal","type":"combo","description":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","conditions":{"required_items":[{"menu_id":"1","quantity":1},{"menu_id":"2","quantity":1},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":30},"active":true,"usage_limit":100,"used_count":0,"terms":"Must order exactly 1 of each item type. Valid for limited time."}]}
+[2025-08-27T17:24:20.186Z] Tool called: restaurant2_detailed_offer_by_id
+[2025-08-27T17:24:20.187Z] Tool args: {"offerId":"offer_003"}
+[2025-08-27T17:24:20.188Z] === Tool to display offer details by id called ===
+[2025-08-27T17:24:20.265Z] API Response: {"offerName":"Complete Meal Deal","offerType":"combo","offerDescription":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","offerTerms":"Must order exactly 1 of each item type. Valid for limited time.","discount":"30%"}
+[2025-08-27T17:25:33.637Z] Server created
+[2025-08-27T17:25:33.643Z] Tools registered
+[2025-08-27T17:25:33.644Z] Starting server...
+[2025-08-27T17:25:33.645Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:26:09.057Z] Server created
+[2025-08-27T17:26:09.061Z] Tools registered
+[2025-08-27T17:26:09.062Z] Starting server...
+[2025-08-27T17:26:09.064Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T17:26:10.720Z] Tools list requested
+[2025-08-27T17:26:13.788Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:26:13.789Z] Tool args: {}
+[2025-08-27T17:26:13.790Z] === MENU TOOL CALLED ===
+[2025-08-27T17:26:14.032Z] Menu tool successful
+[2025-08-27T17:26:18.089Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:26:18.090Z] Tool args: {}
+[2025-08-27T17:26:18.091Z] === MENU TOOL CALLED ===
+[2025-08-27T17:26:18.238Z] Menu tool successful
+[2025-08-27T17:26:18.567Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:26:18.569Z] Tool args: {}
+[2025-08-27T17:26:18.570Z] === MENU TOOL CALLED ===
+[2025-08-27T17:26:18.701Z] Menu tool successful
+[2025-08-27T17:26:18.880Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:26:18.880Z] Tool args: {}
+[2025-08-27T17:26:18.882Z] === MENU TOOL CALLED ===
+[2025-08-27T17:26:19.014Z] Menu tool successful
+[2025-08-27T17:26:19.186Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:26:19.187Z] Tool args: {}
+[2025-08-27T17:26:19.188Z] === MENU TOOL CALLED ===
+[2025-08-27T17:26:19.306Z] Menu tool successful
+[2025-08-27T17:26:19.490Z] Tool called: restaurant2_explore_menu
+[2025-08-27T17:26:19.491Z] Tool args: {}
+[2025-08-27T17:26:19.492Z] === MENU TOOL CALLED ===
+[2025-08-27T17:26:19.608Z] Menu tool successful
+[2025-08-27T17:26:32.133Z] Server created
+[2025-08-27T17:26:32.138Z] Tools registered
+[2025-08-27T17:26:32.139Z] Starting server...
+[2025-08-27T17:26:32.141Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T18:55:12.507Z] Server created
+[2025-08-27T18:55:12.512Z] Tools registered
+[2025-08-27T18:55:12.513Z] Starting server...
+[2025-08-27T18:55:12.515Z] Restaurant2 Menu MCP Server running...
+[2025-08-27T18:55:14.048Z] Tools list requested
+[2025-08-27T18:55:16.853Z] Tool called: restaurant2_explore_menu
+[2025-08-27T18:55:16.854Z] Tool args: {}
+[2025-08-27T18:55:16.855Z] === MENU TOOL CALLED ===
+[2025-08-27T18:55:17.278Z] Menu tool successful
+[2025-08-27T18:55:52.275Z] Tool called: restaurant2_place_order
+[2025-08-27T18:55:52.277Z] Tool args: {"customer_name":"test","customer_phone":"5678","item_name":"Caesar Salad","quantity":2}
+[2025-08-27T18:55:52.277Z] === ORDER TOOL CALLED ===
+[2025-08-27T18:55:52.279Z] Sending to API: {"customer_name":"test","customer_phone":"5678","item_name":"Caesar Salad","quantity":2}
+[2025-08-27T18:55:52.453Z] API Response: {"message":"Order placed successfully","order_id":"order_MlUCI5"}
+[2025-08-27T18:56:27.208Z] Tool called: restaurant2_track_order
+[2025-08-27T18:56:27.209Z] Tool args: {"orderId":"order_MlUCI5","customer_phone":"5678"}
+[2025-08-27T18:56:27.210Z] === ORDER Status TOOL CALLED ===
+[2025-08-27T18:56:27.265Z] API Response: {"status":"order_placed"}
+[2025-08-27T18:56:31.598Z] Tool called: restaurant2_explore_offers
+[2025-08-27T18:56:31.599Z] Tool args: {}
+[2025-08-27T18:56:31.600Z] === Tool to display all offers to user choosed ===
+[2025-08-27T18:56:31.737Z] API Response: {"success":true,"activeOffers":[{"id":"offer_001","name":"Pizza Lovers Deal","type":"combo","description":"Order 2 Pizzas + 1 Salad and get 25% off total","conditions":{"required_items":[{"menu_id":"1","quantity":2},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":25},"active":true,"usage_limit":200,"used_count":0,"terms":"Valid on combo orders only. Cannot be combined with other offers."},{"id":"offer_002","name":"Burger Bonanza","type":"bogo_percentage","description":"Buy 3 Chicken Burgers and get 50% off the total burger cost","conditions":{"required_items":[{"menu_id":"2","quantity":3}]},"discount":{"type":"percentage","value":50,"applies_to":"matching_items_only"},"active":true,"usage_limit":150,"used_count":0,"terms":"Discount applies only to burger items. Minimum 3 burgers required."},{"id":"offer_003","name":"Complete Meal Deal","type":"combo","description":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","conditions":{"required_items":[{"menu_id":"1","quantity":1},{"menu_id":"2","quantity":1},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":30},"active":true,"usage_limit":100,"used_count":0,"terms":"Must order exactly 1 of each item type. Valid for limited time."}]}
+[2025-08-27T18:56:40.320Z] Tool called: restaurant2_detailed_offer_by_id
+[2025-08-27T18:56:40.321Z] Tool args: {"offerId":"offer_002"}
+[2025-08-27T18:56:40.321Z] === Tool to display offer details by id called ===
+[2025-08-27T18:56:40.399Z] API Response: {"offerName":"Burger Bonanza","offerType":"bogo_percentage","offerDescription":"Buy 3 Chicken Burgers and get 50% off the total burger cost","offerTerms":"Discount applies only to burger items. Minimum 3 burgers required.","discount":"50%"}
