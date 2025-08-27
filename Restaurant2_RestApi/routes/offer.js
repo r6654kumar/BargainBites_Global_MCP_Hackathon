@@ -3,13 +3,15 @@ const router = express.Router();
 export default (client) => {
     //route to display all active offers from the restaurant
     router.get("/", async (req, res) => {
-        const db = await client.db("restaurant2_db");
+        // const db = await client.db("restaurant2_db");
         try {
-            const activeOffers = await db.collection("offers").find({ active: true }).toArray();
-            if (activeOffers) {
+            // const activeOffers = await db.collection("offers").find({ active: true }).toArray();
+            const query = `SELECT * from offers where active=true`;
+            const response = await client.query(query);
+            if (response.rows.length > 0) {
                 res.status(200).json({
                     "success": true,
-                    activeOffers,
+                    activeOffers:response.rows
                 })
             } else {
                 res.status(200).send("No active offers present as of now");
@@ -20,19 +22,22 @@ export default (client) => {
     })
     //Route to retrieve detailed information about a specific offer 
     router.get("/:id", async (req, res) => {
-        const db = await client.db("restaurant2_db");
+        // const db = await client.db("restaurant2_db");
         const offerId = req.params.id;
         try {
-            const response = await db.collection("offers").findOne({
-                _id: offerId
-            })
-            if (response) {
+            // const response = await db.collection("offers").findOne({
+            //     _id: offerId
+            // })
+            const query = `SELECT * FROM offers WHERE id = $1`;
+            const response  = await client.query(query, [offerId]);
+            if (response.rows.length > 0) {
+                // const offer = response.rows[0];
                 const offerDetails = {
-                    offerName: response.name,
-                    offerType: response.type,
-                    offerDescription: response.description,
-                    offerTerms: response.terms,
-                    discount: response.discount.value + "%"
+                    offerName: response.rows[0].name,
+                    offerType: response.rows[0].type,
+                    offerDescription: response.rows[0].description,
+                    offerTerms: response.rows[0].terms,
+                    discount: response.rows[0].discount.value + "%"
                 }
                 res.status(200).send(offerDetails);
             } else {
