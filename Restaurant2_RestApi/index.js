@@ -32,25 +32,23 @@ async function connectDB() {
 
 //middleware for getting db connection based on headers....
 //if x-restaurant-id is passed db connection pointed to restaurant1, else restaurant2
-function getClient(req) {
-    return req.headers['x-restaurant-id'] === 'restaurant1' ? restaurant1_client : restaurant2_client;
-}
+// Try different header variations
+app.use((req, res, next) => {
+    const restaurantId = req.headers['x-restaurant-id'] ||
+        req.headers['X-Restaurant-Id'] ||
+        req.headers['x_restaurant_id'];
+
+    req.dbClient = restaurantId === 'restaurant1' ? restaurant1_client : restaurant2_client;
+    req.dbName = restaurantId === 'restaurant1' ? "restaurant1" : "restaurant2";
+
+    console.log(`[DB SELECT] ${req.method} ${req.originalUrl} -> ${req.dbName}`);
+    next();
+});
 
 //Changed to routes (using express router) --30/08
-app.use("/menu", (req, res, next) => {
-    const client = getClient(req);
-    menuRoutes(client)(req, res, next);
-});
-
-app.use("/order", (req, res, next) => {
-    const client = getClient(req);
-    orderRoutes(client)(req, res, next);
-});
-
-app.use("/offers", (req, res, next) => {
-    const client = getClient(req);
-    offerRoutes(client)(req, res, next);
-});
+app.use("/menu", menuRoutes);
+app.use("/order", orderRoutes);
+app.use("/offers", offerRoutes);
 
 
 //
