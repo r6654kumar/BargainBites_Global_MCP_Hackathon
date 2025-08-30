@@ -1,3 +1,4 @@
+runtime: "typescript"
 name: restaurant2_mcp_server
 version: 1.0.0
 
