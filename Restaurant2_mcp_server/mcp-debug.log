@@ -254,3 +254,73 @@
 [2025-08-27T18:56:40.321Z] Tool args: {"offerId":"offer_002"}
 [2025-08-27T18:56:40.321Z] === Tool to display offer details by id called ===
 [2025-08-27T18:56:40.399Z] API Response: {"offerName":"Burger Bonanza","offerType":"bogo_percentage","offerDescription":"Buy 3 Chicken Burgers and get 50% off the total burger cost","offerTerms":"Discount applies only to burger items. Minimum 3 burgers required.","discount":"50%"}
+[2025-08-27T19:22:09.454Z] Tool called: restaurant2_explore_menu
+[2025-08-27T19:22:09.458Z] Tool args: {}
+[2025-08-27T19:22:09.459Z] === MENU TOOL CALLED ===
+[2025-08-27T19:22:09.651Z] Menu tool successful
+[2025-08-28T14:29:59.053Z] Server created
+[2025-08-28T14:29:59.079Z] Tools registered
+[2025-08-28T14:29:59.080Z] Starting server...
+[2025-08-28T14:29:59.082Z] Restaurant2 Menu MCP Server running...
+[2025-08-30T08:40:00.678Z] Server created
+[2025-08-30T08:40:00.687Z] Tools registered
+[2025-08-30T08:40:00.688Z] Starting server...
+[2025-08-30T08:40:00.689Z] Restaurant2 Menu MCP Server running...
+[2025-08-30T08:40:02.410Z] Tools list requested
+[2025-08-30T08:40:05.079Z] Tool called: restaurant2_explore_menu
+[2025-08-30T08:40:05.081Z] Tool args: {}
+[2025-08-30T08:40:05.082Z] === MENU TOOL CALLED ===
+[2025-08-30T08:40:05.500Z] Menu tool error: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[2025-08-30T08:40:13.181Z] Tool called: restaurant2_explore_menu
+[2025-08-30T08:40:13.182Z] Tool args: {}
+[2025-08-30T08:40:13.183Z] === MENU TOOL CALLED ===
+[2025-08-30T08:40:13.371Z] Menu tool error: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+[2025-08-30T08:40:52.628Z] Server created
+[2025-08-30T08:40:52.633Z] Tools registered
+[2025-08-30T08:40:52.634Z] Starting server...
+[2025-08-30T08:40:52.635Z] Restaurant2 Menu MCP Server running...
+[2025-08-30T08:40:53.941Z] Tools list requested
+[2025-08-30T08:40:57.149Z] Tool called: restaurant2_explore_menu
+[2025-08-30T08:40:57.150Z] Tool args: {}
+[2025-08-30T08:40:57.151Z] === MENU TOOL CALLED ===
+[2025-08-30T08:40:57.661Z] Menu tool successful
+[2025-08-30T08:41:06.516Z] Tool called: restaurant2_explore_offers
+[2025-08-30T08:41:06.517Z] Tool args: {}
+[2025-08-30T08:41:06.518Z] === Tool to display all offers to user choosed ===
+[2025-08-30T08:41:06.748Z] API Response: {"success":true,"activeOffers":[{"id":"offer_001","name":"Pizza Lovers Deal","type":"combo","description":"Order 2 Pizzas + 1 Salad and get 25% off total","conditions":{"required_items":[{"menu_id":"1","quantity":2},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":25},"active":true,"usage_limit":200,"used_count":0,"terms":"Valid on combo orders only. Cannot be combined with other offers."},{"id":"offer_002","name":"Burger Bonanza","type":"bogo_percentage","description":"Buy 3 Chicken Burgers and get 50% off the total burger cost","conditions":{"required_items":[{"menu_id":"2","quantity":3}]},"discount":{"type":"percentage","value":50,"applies_to":"matching_items_only"},"active":true,"usage_limit":150,"used_count":0,"terms":"Discount applies only to burger items. Minimum 3 burgers required."},{"id":"offer_003","name":"Complete Meal Deal","type":"combo","description":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","conditions":{"required_items":[{"menu_id":"1","quantity":1},{"menu_id":"2","quantity":1},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":30},"active":true,"usage_limit":100,"used_count":0,"terms":"Must order exactly 1 of each item type. Valid for limited time."}]}
+[2025-08-30T10:03:09.318Z] Server created
+[2025-08-30T10:04:51.472Z] Server created
+[2025-08-30T10:38:33.277Z] Starting server...
+[2025-08-30T10:38:33.285Z] Server created
+[2025-08-30T10:38:33.286Z] Tools registered
+[2025-08-30T10:38:33.288Z] Restaurant2 Menu MCP Server running...
+[2025-08-30T10:41:44.996Z] Starting server...
+[2025-08-30T10:41:45.002Z] Server created
+[2025-08-30T10:41:45.003Z] Tools registered
+[2025-08-30T10:41:45.004Z] Restaurant2 Menu MCP Server running...
+[2025-08-30T10:41:58.146Z] Tools list requested
+[2025-08-30T10:42:01.731Z] Tool called: restaurant2_explore_menu
+[2025-08-30T10:42:01.732Z] Tool args: {}
+[2025-08-30T10:42:01.733Z] === MENU TOOL CALLED ===
+[2025-08-30T10:42:02.085Z] Menu tool successful
+[2025-08-30T10:42:27.382Z] Tool called: restaurant2_place_order
+[2025-08-30T10:42:27.384Z] Tool args: {"customer_name":"testest","customer_phone":"5678","item_name":"Margherita Pizza","quantity":3}
+[2025-08-30T10:42:27.384Z] === ORDER TOOL CALLED ===
+[2025-08-30T10:42:27.385Z] Sending to API: {"customer_name":"testest","customer_phone":"5678","item_name":"Margherita Pizza","quantity":3}
+[2025-08-30T10:42:28.105Z] API Response: {"message":"Order placed successfully","order_id":"order_98R-vP"}
+[2025-08-30T10:42:44.116Z] Tool called: restaurant2_track_order
+[2025-08-30T10:42:44.117Z] Tool args: {"orderId":"order_98R-vP","customer_phone":"9876"}
+[2025-08-30T10:42:44.118Z] === ORDER Status TOOL CALLED ===
+[2025-08-30T10:42:44.277Z] API Response: {"status":"order_placed"}
+[2025-08-30T10:42:53.548Z] Tool called: restaurant2_explore_offers
+[2025-08-30T10:42:53.549Z] Tool args: {}
+[2025-08-30T10:42:53.550Z] === Tool to display all offers to user choosed ===
+[2025-08-30T10:42:53.893Z] API Response: {"success":true,"activeOffers":[{"id":"offer_001","name":"Pizza Lovers Deal","type":"combo","description":"Order 2 Pizzas + 1 Salad and get 25% off total","conditions":{"required_items":[{"menu_id":"1","quantity":2},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":25},"active":true,"usage_limit":200,"used_count":0,"terms":"Valid on combo orders only. Cannot be combined with other offers."},{"id":"offer_002","name":"Burger Bonanza","type":"bogo_percentage","description":"Buy 3 Chicken Burgers and get 50% off the total burger cost","conditions":{"required_items":[{"menu_id":"2","quantity":3}]},"discount":{"type":"percentage","value":50,"applies_to":"matching_items_only"},"active":true,"usage_limit":150,"used_count":0,"terms":"Discount applies only to burger items. Minimum 3 burgers required."},{"id":"offer_003","name":"Complete Meal Deal","type":"combo","description":"Order 1 Pizza + 1 Burger + 1 Salad and save 30%","conditions":{"required_items":[{"menu_id":"1","quantity":1},{"menu_id":"2","quantity":1},{"menu_id":"3","quantity":1}]},"discount":{"type":"percentage","value":30},"active":true,"usage_limit":100,"used_count":0,"terms":"Must order exactly 1 of each item type. Valid for limited time."}]}
+[2025-08-30T10:48:34.540Z] Starting server...
+[2025-08-30T10:48:34.546Z] Server created
+[2025-08-30T10:48:34.547Z] Tools registered
+[2025-08-30T10:48:34.562Z] Restaurant2 Menu MCP Server running...
+[2025-08-30T10:49:06.018Z] Starting server...
+[2025-08-30T10:49:06.023Z] Server created
+[2025-08-30T10:49:06.023Z] Tools registered
+[2025-08-30T10:49:06.037Z] Restaurant2 Menu MCP Server running...

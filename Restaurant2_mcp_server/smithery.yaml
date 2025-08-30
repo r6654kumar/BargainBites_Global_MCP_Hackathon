@@ -1,0 +1,15 @@
+name: restaurant2_mcp_server
+version: 1.0.0
+
+build:
+  format: esm
+  entry: ./src/index.js
+  output: ./dist/index.js
+
+run:
+  command: node dist/index.js
+  port: 8181
+
+runtime:
+  language: node
+  version: "20"
