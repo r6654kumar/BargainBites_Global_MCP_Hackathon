@@ -36,3 +36,7 @@ app.listen(PORT, async () => {
     await connectDB();
     console.log("Restaurant2_RestAPI is running on PORT", PORT);
 })
+
+app.get("/", async(req,res)=>{
+    res.send("Server for Restaurant 2 running.........")
+})
