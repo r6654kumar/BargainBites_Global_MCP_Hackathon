@@ -2,14 +2,23 @@
   "name": "bargainbites_aggregator_agent",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "agent.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@langchain/google-genai": "^0.2.17",
+    "@langchain/langgraph": "^0.4.9",
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "dotenv": "^17.2.2",
+    "langchain": "^0.3.32",
+    "mcp-client": "^1.13.1",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.10"
   }
 }
