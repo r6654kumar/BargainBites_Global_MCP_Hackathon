@@ -3,9 +3,18 @@ import dotenv from "dotenv";
 dotenv.config();
 import { aggregatorAgent } from "./agent.js";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
+import cors from "cors";
 const app = express();
 app.use(express.json());
 const PORT = 8000;
+
+//---------cors enabled
+app.use(cors({
+    origin: "*", // Allow all origins, or specify your frontend URL like "http://localhost:3000"
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 
 //----test---------
 app.listen(PORT, () => {
@@ -56,6 +65,7 @@ app.post("/chat", async (req, res) => {
         if (formattedMessages.length === 0) {
             return res.status(400).json({ error: "No valid messages found" });
         }
+        console.log(formattedMessages);
 
         const result = await aggregatorAgent.invoke({ messages: formattedMessages });
 
