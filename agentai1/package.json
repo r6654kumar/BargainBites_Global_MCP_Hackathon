@@ -1,0 +1,17 @@
+{
+  "name": "agent1-combined",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "cli.js",
+  "scripts": {
+    "start": "node cli.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.6.0",
+    "@langchain/core": "^0.1.18",
+    "axios": "^1.6.7",
+    "dotenv": "^16.6.1",
+    "openai": "^5.19.1",
+    "readline-sync": "^1.4.10"
+  }
+}
