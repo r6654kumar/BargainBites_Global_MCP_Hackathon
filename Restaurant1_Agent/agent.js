@@ -1,6 +1,6 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
-import { StateGraph, MessagesAnnotation, START, END } from "@langchain/langgraph";
+import {  StateGraph, MessagesAnnotation, START, END} from "@langchain/langgraph";
 import { DynamicStructuredTool } from "@langchain/core/tools";
 import { z } from "zod";
 import { getMenu } from "./services/menuService.js";
@@ -9,11 +9,15 @@ import { getAllOfferDetails, getOfferDetailsById } from "./services/offerService
 import yaml from 'yaml';
 import fs from 'fs';
 import dotenv from 'dotenv';
+// import { RunCommand } from "@langchain/langgraph/dist/graph/command.js";
+ import { AIMessage,HumanMessage } from "@langchain/core/messages";
+ 
+ 
 
 dotenv.config();  
 
-//const configFile = fs.readFileSync('<correct-path-here>/restaurant-system-config.yaml', 'utf8');
-//const systemConfig = yaml.parse(configFile);
+const configFile = fs.readFileSync('../Restaurant1_Agent/restaurant-system-config.yaml', 'utf8');
+const systemConfig = yaml.parse(configFile);
 
 const buildSystemPrompt = (config) => {
   const { restaurant_assistant } = config;
@@ -97,8 +101,7 @@ ${restaurant_assistant.personality_traits?.map(trait => `- ${trait}`).join('\n')
 
 Remember: Be proactive about offers, transparent about errors, and always verify tool responses!`;
 };
-
-//const systemPrompt = buildSystemPrompt(systemConfig);
+const systemPrompt = buildSystemPrompt(systemConfig);
 
 const restaurantTools = [
   new DynamicStructuredTool({
@@ -206,7 +209,12 @@ function shouldContinue({ messages }) {
 }
 
 async function callModel(state) {
-  let messages = state.messages;
+
+
+  
+let messages = state.messages;
+
+
   if (messages.length === 1) {
     messages = [
       { role: "system", content: systemPrompt },
@@ -214,8 +222,27 @@ async function callModel(state) {
     ];
   }
 
+  
+
   const response = await model.invoke(messages);
-  return { messages: [response] };
+  //return { messages: [response] };
+  
+if (Array.isArray(response.content)) {
+    return {
+      messages: [
+        new AIMessage("", { additional_kwargs: { tool_calls: response.content } })
+      ]
+    };
+  }
+
+  // Otherwise normal text response
+  return {
+    messages: [
+      new AIMessage(response.content)
+    ]
+  };
+
+
 }
 
 const workflow = new StateGraph(MessagesAnnotation)
@@ -225,5 +252,13 @@ const workflow = new StateGraph(MessagesAnnotation)
   .addEdge("tools", "agent")
   .addConditionalEdges("agent", shouldContinue);
 
+
+
 export const restaurantAgent = workflow.compile();
-// export { systemConfig };
+export { systemConfig };
+
+
+
+
+
+
