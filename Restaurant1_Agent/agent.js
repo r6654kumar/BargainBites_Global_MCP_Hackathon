@@ -12,8 +12,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();  
 
-//const configFile = fs.readFileSync('<correct-path-here>/restaurant-system-config.yaml', 'utf8');
-//const systemConfig = yaml.parse(configFile);
+const configFile = fs.readFileSync('./restaurant-system-config.yaml', 'utf8');
+const systemConfig = yaml.parse(configFile);
 
 const buildSystemPrompt = (config) => {
   const { restaurant_assistant } = config;
@@ -98,7 +98,7 @@ ${restaurant_assistant.personality_traits?.map(trait => `- ${trait}`).join('\n')
 Remember: Be proactive about offers, transparent about errors, and always verify tool responses!`;
 };
 
-//const systemPrompt = buildSystemPrompt(systemConfig);
+const systemPrompt = buildSystemPrompt(systemConfig);
 
 const restaurantTools = [
   new DynamicStructuredTool({
@@ -197,7 +197,7 @@ const toolNode = new ToolNode(restaurantTools);
 const model = new ChatGoogleGenerativeAI({
   model: "gemini-2.0-flash",
   temperature: 0,
-  apiKey: "AIzaSyCQT6vGh3zG6nO0O88SK_DnggmWU8u4oio"
+  apiKey: process.env.GEMINI_API_KEY
 }).bindTools(restaurantTools);
 
 function shouldContinue({ messages }) {
