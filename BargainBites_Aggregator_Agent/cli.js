@@ -30,11 +30,11 @@ function ask() {
       console.log("\n--- Processing your request ---");
       
       const response = await agent.invoke({
-        messages: [new HumanMessage(input)]  // Use HumanMessage instead of plain object
+        messages: [new HumanMessage(input)]  
       });
 
       const lastMessage = response.messages[response.messages.length - 1];
-      console.log(`\nAggregator: ${lastMessage.content}`);
+      console.log(`\nBargainBites: ${lastMessage.content}`);
       console.log("\n" + "=".repeat(50));
       
     } catch (err) {
