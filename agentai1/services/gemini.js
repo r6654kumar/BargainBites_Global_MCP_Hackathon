@@ -1,37 +1,29 @@
-// services/openai.js
-import { OpenAI } from "openai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
 dotenv.config();
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-export async function runLLMAgent(userMessage) {
+export async function runGeminiAgent(userMessage) {
+  const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
   const prompt = `
-You are a food delivery assistant.
-Extract the user's intent and food item.
-Respond ONLY in JSON format:
-{
-  "intent": "order",
-  "food": "pizza"
-}
+You are a smart food delivery assistant.
+Understand user's intent and extract if they want to order something.
+Reply in JSON format like:
+{ "intent": "order", "food": "pizza" }
 or
-{
-  "intent": "query",
-  "reply": "We are open 10am–10pm."
-}
+{ "intent": "query", "reply": "We are open from 10 AM to 10 PM." }
+
 User: ${userMessage}
 `;
 
-  const res = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: prompt }]
-  });
-
-  const reply = res.choices[0].message.content.trim();
+  const result = await model.generateContent(prompt);
+  const text = result.response.text();
 
   try {
-    return JSON.parse(reply);
-  } catch {
-    return { intent: "unknown", reply: "Sorry, I didn't understand." };
+    return JSON.parse(text);
+  } catch (e) {
+    return { intent: "unknown", reply: "Sorry, I didn't understand that." };
   }
 }
