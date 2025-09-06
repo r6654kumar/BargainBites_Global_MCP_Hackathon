@@ -9,13 +9,14 @@ import {
   InMemoryTaskStore,
 } from "@a2a-js/sdk/server";
 import { A2AExpressApp } from "@a2a-js/sdk/server/express";
-
+const PORT = process.env.PORT;
+const publicUrl = process.env.RESTAURANT1_A2A_URL || `http://localhost:${PORT}`;
 const restaurant1Card = {
   name: "Restaurant1 Agent",
   description: "LangGraph-based restaurant assistant for Restaurant 1",
   protocolVersion: "0.3.0",
   version: "1.0.0",
-  url: process.env.RESTAURANT1_A2A_URL || "http://localhost:3001",
+  url: publicUrl,
   skills: [
     {
       id: "chat",
@@ -278,16 +279,18 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3001;
+// const PORT = process.env.PORT ? Number(process.env.PORT) : 3001;
+
+// const publicUrl = process.env.RESTAURANT1_A2A_URL || `http://localhost:${PORT}`;
 
 app.listen(PORT, () => {
-  console.log(`\n Restaurant1 A2A Server running at http://localhost:${PORT}`);
+  console.log(`\n Restaurant1 A2A Server running at ${publicUrl}`);
   console.log(`Agent Card: ${restaurant1Card.name}`);
   console.log(` A2A URL: ${restaurant1Card.url}`);
   console.log(`\n Available endpoints:`);
-  console.log(`   - GET  http://localhost:${PORT}/health`);
-  console.log(`   - GET  http://localhost:${PORT}/.well-known/agent.json`);
-  console.log(`   - POST http://localhost:${PORT}/execute`);
-  console.log(`   - POST http://localhost:${PORT}/test-langgraph`);
+  console.log(`   - GET  ${publicUrl}/health`);
+  console.log(`   - GET  ${publicUrl}/.well-known/agent.json`);
+  console.log(`   - POST ${publicUrl}/execute`);
+  console.log(`   - POST ${publicUrl}/test-langgraph`);
   console.log(`\n Server ready for testing!`);
 });
