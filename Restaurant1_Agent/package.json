@@ -2,11 +2,11 @@
   "name": "restaurant1_agent",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "restaurant1_agent_A2A_server.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node restaurant1_agent_A2A_server.js",
+    "dev": "nodemon restaurant1_agent_A2A_server.js"
   },
   "keywords": [],
   "author": "",
