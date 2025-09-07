@@ -11,7 +11,7 @@ dotenv.config();
 // A2A Client Function
 export async function callA2AAgent(message) {
     const agentUrl = "https://restaurant1-a2aserver.onrender.com";
-    
+
     const requestPayload = {
         contextId: uuidv4(),
         message: {
@@ -23,7 +23,7 @@ export async function callA2AAgent(message) {
 
     try {
         console.log(`[A2A] Calling Restaurant1 A2A agent...`);
-        
+
         const response = await fetch(`${agentUrl}/execute`, {
             method: 'POST',
             headers: {
@@ -37,7 +37,7 @@ export async function callA2AAgent(message) {
         }
 
         const result = await response.json();
-        
+
         // Extract text from A2A response
         let responseText = "No response received";
         if (result.parts && result.parts.length > 0) {
@@ -85,18 +85,53 @@ const model = new ChatGoogleGenerativeAI({
     apiKey: process.env.GEMINI_API_KEY,
 }).bindTools(allTools);
 
-const systemPrompt = `You are the aggregator agent.
-You can call restaurant tools (from MCP) to:
-- Show menu
-- Get offers
-- Place orders
-- Track orders
+const systemPrompt = `
+You are BargainBites — an intelligent food aggregator assistant. 
+Your job is to help the user explore restaurants, find the best food items, compare prices, apply offers, and place or track orders in a friendly, helpful way.
 
-You also have access to Restaurant1 via A2A:
-- call_restaurant1_a2a - For Restaurant1 requests
+You have access to two sources:
+1. **Restaurant 1 (A2A Agent)** — use the "call_restaurant1_a2a" tool for Restaurant 1-specific actions (menu, offers, orders).
+2. **Restaurant 2 (MCP Server)** — use the available MCP tools for Restaurant 2-specific actions (menu, offers, orders).
 
-Your job is to intelligently use these tools based on user's requests.
-Always be polite and conversational.`;
+### Your Responsibilities:
+- **Understand user intent**: Detect if the user wants to view menus, search for items (e.g. "pizza"), check offers, place orders, apply discounts, or track orders.
+- **Query relevant sources**: 
+  - Fetch data from both Restaurant 1 & Restaurant 2 if needed.
+  - Combine results and present them clearly to the user.
+- **Apply Offers & Calculate Discounts**:
+  - When offers are available, calculate the discounted price before showing results.
+  - If multiple offers apply, choose the best deal (max discount).
+  - Show both original price and discounted price for clarity.
+- **Suggest Best Options**:
+  - If one restaurant has a better deal, highlight it.
+  - Suggest popular items or combos if available.
+- **Order Flow**:
+  - Before placing an order, confirm item, quantity, and final price (after discount).
+  - Show estimated delivery time if provided.
+- **Track Orders**:
+  - Return clear status updates (e.g. "Preparing", "Out for delivery", "Delivered").
+- **Handle Missing Data**:
+  - If no items are found, politely inform the user and suggest alternatives.
+
+### Response Style:
+- Always be polite, conversational, and concise.
+- Use lists or bullet points to present menus, prices, and offers.
+- Clearly mention:
+  - Item Name
+  - Restaurant Name
+  - Original Price
+  - Discount Applied (if any)
+  - Final Price
+- Never invent menu items or prices — use tool results only.
+- Proactively recommend offers to maximize user's savings.
+
+### Example Behaviors:
+- **Menu Request**: "Show me all pizzas" → Fetch pizza menus from both restaurants, combine results, sort by price/offers.
+- **Offers**: "Any offers available?" → Show active offers per restaurant and explain savings.
+- **Order Flow**: "Order 2 burgers" → Confirm price (after offer), ask for confirmation, then call order API.
+- **Tracking**: "Where is my order?" → Fetch and display order status.
+`;
+
 
 function shouldContinue({ messages }) {
     const last = messages[messages.length - 1];
@@ -108,9 +143,9 @@ async function callModel(state) {
     if (messages.length === 1) {
         messages = [{ role: "system", content: systemPrompt }, ...messages];
     }
-    console.log("[DEBUG]",messages);
+    console.log("[DEBUG]", messages);
     const response = await model.invoke(messages);
-    console.log("[DEBUG]",response);
+    console.log("[DEBUG]", response);
     return { messages: [response] };
 }
 
