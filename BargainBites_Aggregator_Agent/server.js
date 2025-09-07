@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { aggregatorAgent } from "./agent.js";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
+import { verifyDescopeSession } from "./middleware/verifyDescopeSession.js";
 import cors from "cors";
 const app = express();
 app.use(express.json());
@@ -10,7 +11,7 @@ const PORT = 8000;
 
 //---------cors enabled
 app.use(cors({
-    origin: "*", 
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -45,7 +46,7 @@ app.listen(PORT, () => {
 //         })
 //     }
 // })
-app.post("/chat", async (req, res) => {
+app.post("/chat",verifyDescopeSession, async (req, res) => {
     try {
         const { messages } = req.body;
         if (!messages || !Array.isArray(messages)) {
