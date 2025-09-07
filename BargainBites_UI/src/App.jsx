@@ -6,10 +6,12 @@ import MessageInput from './components/MessageInput';
 import Login from './components/Login';
 import './styles.css';
 import { useSession, useUser, useDescope } from '@descope/react-sdk';
+import { getSessionToken } from '@descope/react-sdk';
 
 const App = () => {
   const { isAuthenticated, isSessionLoading } = useSession();
   const { user, isUserLoading } = useUser();
+
   const { logout } = useDescope();
 
   const [messages, setMessages] = useState([
@@ -26,6 +28,8 @@ const App = () => {
   }, [messages]);
 
   const sendMessage = async (e) => {
+    const sessionToken = getSessionToken();
+    console.log("Extracted Session Token", sessionToken);
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
@@ -37,13 +41,16 @@ const App = () => {
     try {
       const apiUrl = 'https://bargainbites-aggregator-agent.onrender.com/chat';
       const payload = { messages: [{ role: 'user', content: userMessage.content }] };
-
+      const headers = {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + sessionToken,
+      }
+      // console.log("TESTTTTTTTTTTTTTT", headers);
       const response = await fetch(apiUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: headers,
         body: JSON.stringify(payload),
       });
-
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
       const data = await response.json();
