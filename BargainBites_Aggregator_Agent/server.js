@@ -11,7 +11,7 @@ const PORT = 8000;
 
 //---------cors enabled
 app.use(cors({
-    origin: "*",
+    origin: ["http://localhost:5173", "https://bargainbitesagent.vercel.app"], 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
