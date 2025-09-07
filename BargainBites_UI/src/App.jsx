@@ -28,7 +28,7 @@ const App = () => {
   }, [messages]);
 
   const sendMessage = async (e) => {
-    const sessionToken = getSessionToken();
+    const sessionToken = await getSessionToken();
     // console.log("Extracted Session Token", sessionToken);
     e.preventDefault();
     if (!input.trim() || isLoading) return;
@@ -40,15 +40,15 @@ const App = () => {
 
     try {
       const apiUrl = 'https://bargainbites-aggregator-agent.onrender.com/chat';
+      // const apiUrl = `http://localhost:8000/chat`;
       const payload = { messages: [{ role: 'user', content: userMessage.content }] };
       const headers = {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + sessionToken,
       }
-      // console.log("TESTTTTTTTTTTTTTT", headers);
       const response = await fetch(apiUrl, {
         method: 'POST',
-        headers: headers,
+        headers,
         body: JSON.stringify(payload),
       });
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
