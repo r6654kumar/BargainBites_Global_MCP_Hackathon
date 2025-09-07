@@ -29,7 +29,7 @@ const App = () => {
 
   const sendMessage = async (e) => {
     const sessionToken = getSessionToken();
-    console.log("Extracted Session Token", sessionToken);
+    // console.log("Extracted Session Token", sessionToken);
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
