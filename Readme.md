@@ -60,7 +60,7 @@ No local setup required. Just open the link and begin chatting!
 | Backend             | [Node.js](https://nodejs.org/), [Express.js](https://expressjs.com/)                           |
 | AI Agents           | [LangGraph](https://www.langgraph.dev/), A2A Protocol                                          |
 | Security / IAM      | [Descope](https://www.descope.com/) – OAuth 2.0, Inbound Apps, Scoped Access, Consent Handling |
-| Communication       | HTTP REST APIs, Agent-to-Agent (A2A) Protocol                                                  |
+| Communication       | HTTP REST APIs, Agent-to-Agent (A2A) Protocol,MCP                                               |
 | DevOps / Hosting    | GitHub, [Render](https://render.com/), [Smithery](https://smithery.dev/) (for MCP Server)      |
 
 
