@@ -5,6 +5,7 @@ export const verifyDescopeSession = async (req, res, next) => {
     try {
         // console.log(" verifyDescopeSession middleware triggered");
         console.log("Headers received:", req.headers);
+        console.log("[DEBUG LOG]",req.headers['authorization']);
         const authHeader = req.headers['authorization'];
         if (!authHeader) {
             return res.status(401).json({ error: "Missing Authorization header" });
