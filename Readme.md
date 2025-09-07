@@ -48,8 +48,14 @@ We used Descope to ensure secure, OAuth-based API communication between agents:
 
 ## How to Run
 Everything is hosted — just click the live demo link and start interacting with our intelligent agent system.
-[Live Demo Link]
+
 No local setup required. Just open the link and begin chatting!
+- Live Link for BargainBites (main user facing AI Agent Client ) : https://bargainbitesagent.vercel.app/
+- BargainBites Aggregator  A2A Client + Server Link (Deployed as Express Server)  :  https://bargainbites-aggregator-agent.onrender.com
+- Restaurant 1 A2A Langgraph Client + Server Link : https://restaurant1-a2aserver.onrender.com/.well-known/agent.json
+- Restaurant 2 MCP Server deployed link (Smithery) : https://smithery.ai/server/@r6654kumar/bargainbites_restaurant2_mcp
+- Restaurant RestAPI : https://bargainbites-global-mcp-hackathon.onrender.com 
+
 
 
 ## Tech Stack
