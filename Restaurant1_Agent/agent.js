@@ -16,7 +16,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();  
 
+<<<<<<< HEAD
 const configFile = fs.readFileSync('../Restaurant1_Agent/restaurant-system-config.yaml', 'utf8');
+=======
+const configFile = fs.readFileSync('./restaurant-system-config.yaml', 'utf8');
+>>>>>>> 624056ec4ae8179d9c9e6a09badeea20cc6f5b51
 const systemConfig = yaml.parse(configFile);
 
 const buildSystemPrompt = (config) => {
@@ -101,6 +105,10 @@ ${restaurant_assistant.personality_traits?.map(trait => `- ${trait}`).join('\n')
 
 Remember: Be proactive about offers, transparent about errors, and always verify tool responses!`;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 624056ec4ae8179d9c9e6a09badeea20cc6f5b51
 const systemPrompt = buildSystemPrompt(systemConfig);
 
 const restaurantTools = [
@@ -200,7 +208,7 @@ const toolNode = new ToolNode(restaurantTools);
 const model = new ChatGoogleGenerativeAI({
   model: "gemini-2.0-flash",
   temperature: 0,
-  apiKey: "AIzaSyCQT6vGh3zG6nO0O88SK_DnggmWU8u4oio"
+  apiKey: process.env.GEMINI_API_KEY
 }).bindTools(restaurantTools);
 
 function shouldContinue({ messages }) {
