@@ -13,7 +13,8 @@ const PORT = 8000;
 app.use(cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
 }));
 
 
@@ -46,7 +47,7 @@ app.listen(PORT, () => {
 //         })
 //     }
 // })
-app.post("/chat",verifyDescopeSession, async (req, res) => {
+app.post("/chat", verifyDescopeSession, async (req, res) => {
     try {
         const { messages } = req.body;
         if (!messages || !Array.isArray(messages)) {
