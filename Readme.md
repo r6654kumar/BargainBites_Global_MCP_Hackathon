@@ -106,21 +106,21 @@ Bargain Bites is a multi-agent food ordering system where:
 ## Who Can Use This Application?
 
 ### Restaurant Owners
-How it helps:
+##How it helps:
 - Integrate their restaurant via a Restaurant Agent or MCP server, and plug into the aggregator ecosystem.
 - Automatically get orders when they offer the best price or deal.
 - Securely expose their APIs using Descope with full access control and OAuth scopes.
 - No need for direct customer interaction—AI handles the interface.
-Use Case:
+##Use Case:
 A restaurant integrates with the platform via a simple API or LangGraph agent. They provide pricing/menu info, and the aggregator agent contacts them when needed. Orders are sent automatically if selected by the AI.
 
 ### Customers
-How it helps:
+##How it helps:
 - Interact naturally (like chatting with a person) to:
 Tell their food preference
 - Get suggestions with best prices
 - Place an order quickly
 - No need to browse multiple apps or compare prices—AI does it all.
-Use Case:
+##Use Case:
 - A customer says, “I want pizza.” The AI finds the cheapest or best-reviewed pizza from connected restaurants and places the order on the user's behalf after taking their name and phone number.
 
