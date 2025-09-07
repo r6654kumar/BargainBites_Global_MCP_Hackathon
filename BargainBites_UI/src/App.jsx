@@ -40,7 +40,7 @@ const App = () => {
 
     try {
       const sessionToken = await getSessionToken();
-      console.log("TEEEEEEEEEEST", sessionToken);
+      // console.log("TEEEEEEEEEEST", sessionToken);
       const apiUrl = 'https://bargainbites-aggregator-agent.onrender.com/chat';
       // const apiUrl = `http://localhost:8000/chat`;
       const payload = { messages: [{ role: 'user', content: userMessage.content }] };
@@ -54,7 +54,7 @@ const App = () => {
         body: JSON.stringify(payload),
         credentials: "include"
       });
-      console.log(response);
+      // console.log(response);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
       const data = await response.json();
