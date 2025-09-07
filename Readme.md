@@ -53,8 +53,8 @@ We used Descope to ensure secure, OAuth-based API communication between agents:
 
 ## How to Run
 Everything is hosted — just click the live demo link and start interacting with our intelligent agent system.
-
 No local setup required. Just open the link and begin chatting!
+- GitHub Live Link : https://github.com/r6654kumar/BargainBites_Global_MCP_Hackathon
 - Live Link for BargainBites (main user facing AI Agent Client ) : https://bargainbitesagent.vercel.app/
 - BargainBites Aggregator  A2A Client + Server Link (Deployed as Express Server)  :  https://bargainbites-aggregator-agent.onrender.com
 - Restaurant 1 A2A Langgraph Client + Server Link : https://restaurant1-a2aserver.onrender.com/.well-known/agent.json
@@ -89,7 +89,9 @@ If given more time, here’s what we’d enhance:
 - UI enhancements for a smoother user experience
 
 ## Public GitHub Repository
-[GitHub Repository Link]
+
+GitHub Live Link : https://github.com/r6654kumar/BargainBites_Global_MCP_Hackathon
+
 
 ## What Our App Does
 Bargain Bites is a multi-agent food ordering system where:
