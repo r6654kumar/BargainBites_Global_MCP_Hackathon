@@ -77,7 +77,7 @@ No local setup required. Just open the link and begin chatting!
 
 
 ## Demo Video
-[Watch the Demo}
+(https://youtu.be/_I479IK_EiA?si=2WiEB3FKpTctomPG)
 
 
 ## Future Improvements
