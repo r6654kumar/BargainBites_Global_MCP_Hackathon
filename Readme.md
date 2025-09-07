@@ -20,6 +20,11 @@ Descope as IAM to secure inter-agent communication
 ## What We Built
 We created a multi-agent food-ordering system where an Aggregator Agent receives user input, queries multiple restaurants, and places the best order based on price and preferences.
 
+### System Architecture Diagram
+
+![Bargain Bites Flow](./Assets/bargain_bites_flow.png)
+
+
 ### Agent Design
 ### Aggregator Agent (Main AI agent facing the user)
 - Built with Node.js using Lang graph
@@ -117,6 +122,3 @@ Tell their food preference
 Use Case:
 - A customer says, “I want pizza.” The AI finds the cheapest or best-reviewed pizza from connected restaurants and places the order on the user's behalf after taking their name and phone number.
 
-### System Architecture Diagram
-
-![Bargain Bites Flow](./Assets/bargain_bites_flow.png)
