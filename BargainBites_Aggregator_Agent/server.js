@@ -4,6 +4,7 @@ dotenv.config();
 import { aggregatorAgent } from "./agent.js";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
 import { verifyDescopeSession } from "./middleware/verifyDescopeSession.js";
+import fetch from "node-fetch";
 import cors from "cors";
 const app = express();
 app.use(express.json());
@@ -103,4 +104,22 @@ app.get("/", (req, res) => {
         status: "OK",
         message: "BargainBites Aggregator Agent Server running"
     });
+})
+
+//[TEST] route to wake up Restaurant 1 agent server [FIX: Render Service Down Issue]
+app.get("/wake-restaurant1", async(req,res)=>{
+    try{
+        const response = await fetch("https://restaurant1-a2aserver.onrender.com/health");
+        const data = await response.json();
+        res.json({
+            success:true,
+            data
+        })
+    }catch(err){
+        console.log("Failed to wake up Restaurant 1 Agent Server");
+        res.status(500).json({
+            success:false,
+            error: err.message
+        })
+    }
 })
