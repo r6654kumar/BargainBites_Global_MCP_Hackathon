@@ -20,7 +20,23 @@ const App = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const chatContainerRef = useRef(null);
+  //warm wake up server
+  useEffect(() => {
+    const warmUpServer = async () => {
+      try {
+        const response = await fetch("https://bargainbites-aggregator-agent.onrender.com/wake-restaurant1");
+        if (!response.ok) {
+          console.warn("Warm-up request failed");
+        } else {
+          console.log("Server warmed up");
+        }
+      } catch (error) {
+        console.error("Warm-up request error:", error);
+      }
+    };
 
+    warmUpServer();
+  }, []);
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
